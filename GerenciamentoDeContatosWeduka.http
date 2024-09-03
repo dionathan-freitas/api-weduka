@@ -1,0 +1,6 @@
+@GerenciamentoDeContatosWeduka_HostAddress = http://localhost:5141
+
+GET {{GerenciamentoDeContatosWeduka_HostAddress}}/api/
+Accept: application/json
+
+###
