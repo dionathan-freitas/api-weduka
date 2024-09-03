@@ -31,7 +31,7 @@ Esta API permite a criação, leitura, atualização e exclusão de pessoas e se
 ### Clonando o Repositório
 
 ```bash
-git [clone https://github.com/yourusername/yourrepository.git](https://github.com/dionathan-freitas/api-weduka.git)
+git [api-weduka](https://github.com/dionathan-freitas/api-weduka.git)
 cd api-weduka
 ```
 
