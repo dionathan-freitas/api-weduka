@@ -1,51 +1,51 @@
-Claro! Um bom `README` para a sua API deve fornecer uma vis„o geral clara sobre o projeto, como configurar, usar e testar a API. Aqui est· um modelo de `README.md` que vocÍ pode usar e adaptar conforme necess·rio:
+Claro! Um bom `README` para a sua API deve fornecer uma vis√£o geral clara sobre o projeto, como configurar, usar e testar a API. Aqui est√° um modelo de `README.md` que voc√™ pode usar e adaptar conforme necess√°rio:
 
 ---
 
 # Gerenciamento de Contatos API
 
-Este projeto È uma API RESTful para gerenciar pessoas e seus contatos. Utiliza ASP.NET Core 8 e SQLite para o armazenamento dos dados.
+Este projeto √© uma API RESTful para gerenciar pessoas e seus contatos. Utiliza ASP.NET Core 8 e SQLite para o armazenamento dos dados.
 
-## Õndice
+## √çndice
 
-- [Vis„o Geral](#vis„o-geral)
-- [ConfiguraÁ„o do Projeto](#configuraÁ„o-do-projeto)
+- [Vis√£o Geral](#vis√£o-geral)
+- [Configura√ß√£o do Projeto](#configura√ß√£o-do-projeto)
 - [Endpoints da API](#endpoints-da-api)
 - [Testando a API](#testando-a-api)
-- [ContribuiÁ„o](#contribuiÁ„o)
-- [LicenÁa](#licenÁa)
+- [Contribui√ß√£o](#contribui√ß√£o)
+- [Licen√ßa](#licen√ßa)
 
-## Vis„o Geral
+## Vis√£o Geral
 
-Esta API permite a criaÁ„o, leitura, atualizaÁ„o e exclus„o de pessoas e seus contatos. As operaÁıes suportadas incluem:
-- Gerenciar informaÁıes de pessoas (nome).
+Esta API permite a cria√ß√£o, leitura, atualiza√ß√£o e exclus√£o de pessoas e seus contatos. As opera√ß√µes suportadas incluem:
+- Gerenciar informa√ß√µes de pessoas (nome).
 - Gerenciar contatos associados a pessoas (tipo e valor).
 
-## ConfiguraÁ„o do Projeto
+## Configura√ß√£o do Projeto
 
 ### Requisitos
 
 - [.NET Core 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [SQLite](https://www.sqlite.org/download.html) (ou use o DB Browser for SQLite para visualizaÁ„o)
+- [SQLite](https://www.sqlite.org/download.html) (ou use o DB Browser for SQLite para visualiza√ß√£o)
 
-### Clonando o RepositÛrio
+### Clonando o Reposit√≥rio
 
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
+git [clone https://github.com/yourusername/yourrepository.git](https://github.com/dionathan-freitas/api-weduka.git)
+cd api-weduka
 ```
 
-### Instalando DependÍncias
+### Instalando Depend√™ncias
 
 ```bash
 dotnet restore
 ```
 
-### ConfiguraÁ„o do Banco de Dados
+### Configura√ß√£o do Banco de Dados
 
-1. **Criar a MÌdia do Banco de Dados**
+1. **Criar a M√≠dia do Banco de Dados**
 
-   Primeiro, crie as migraÁıes e atualize o banco de dados:
+   Primeiro, crie as migra√ß√µes e atualize o banco de dados:
 
    ```bash
    dotnet ef migrations add InitialCreate
@@ -54,7 +54,7 @@ dotnet restore
 
 2. **Adicionar Dados Iniciais**
 
-   Dados iniciais s„o adicionados na classe `ApplicationDbContext` usando o mÈtodo `OnModelCreating`.
+   Dados iniciais s√£o adicionados na classe `ApplicationDbContext` usando o m√©todo `OnModelCreating`.
 
 ### Executando o Projeto
 
@@ -62,7 +62,7 @@ dotnet restore
 dotnet run
 ```
 
-A API estar· disponÌvel em `http://localhost:5000`, `https://localhost:44324/`, (ou outro porto configurado).
+A API estar√° dispon√≠vel em `http://localhost:5000`, `https://localhost:44324/`, (ou outro porto configurado).
 
 ## Endpoints da API
 
@@ -71,18 +71,18 @@ A API estar· disponÌvel em `http://localhost:5000`, `https://localhost:44324/`, 
 - **Listar todas as pessoas**
 
   - **URL:** `/api/contacts/people`
-  - **MÈtodo:** `GET`
+  - **M√©todo:** `GET`
 
-- **Obter uma pessoa especÌfica**
+- **Obter uma pessoa espec√≠fica**
 
   - **URL:** `/api/contacts/people/{id}`
-  - **MÈtodo:** `GET`
+  - **M√©todo:** `GET`
 
 - **Adicionar uma nova pessoa**
 
   - **URL:** `/api/contacts/people`
-  - **MÈtodo:** `POST`
-  - **Corpo da RequisiÁ„o:**
+  - **M√©todo:** `POST`
+  - **Corpo da Requisi√ß√£o:**
     ```json
     {
       "name": "Nome da Pessoa"
@@ -92,8 +92,8 @@ A API estar· disponÌvel em `http://localhost:5000`, `https://localhost:44324/`, 
 - **Atualizar uma pessoa**
 
   - **URL:** `/api/contacts/people/{id}`
-  - **MÈtodo:** `PUT`
-  - **Corpo da RequisiÁ„o:**
+  - **M√©todo:** `PUT`
+  - **Corpo da Requisi√ß√£o:**
     ```json
     {
       "id": 1,
@@ -104,25 +104,25 @@ A API estar· disponÌvel em `http://localhost:5000`, `https://localhost:44324/`, 
 - **Excluir uma pessoa**
 
   - **URL:** `/api/contacts/people/{id}`
-  - **MÈtodo:** `DELETE`
+  - **M√©todo:** `DELETE`
 
 ### Contatos
 
 - **Listar todos os contatos**
 
   - **URL:** `/api/contacts`
-  - **MÈtodo:** `GET`
+  - **M√©todo:** `GET`
 
-- **Obter um contato especÌfico**
+- **Obter um contato espec√≠fico**
 
   - **URL:** `/api/contacts/{id}`
-  - **MÈtodo:** `GET`
+  - **M√©todo:** `GET`
 
 - **Adicionar um novo contato**
 
   - **URL:** `/api/contacts`
-  - **MÈtodo:** `POST`
-  - **Corpo da RequisiÁ„o:**
+  - **M√©todo:** `POST`
+  - **Corpo da Requisi√ß√£o:**
     ```json
     {
       "personId": 1,
@@ -134,8 +134,8 @@ A API estar· disponÌvel em `http://localhost:5000`, `https://localhost:44324/`, 
 - **Atualizar um contato**
 
   - **URL:** `/api/contacts/{id}`
-  - **MÈtodo:** `PUT`
-  - **Corpo da RequisiÁ„o:**
+  - **M√©todo:** `PUT`
+  - **Corpo da Requisi√ß√£o:**
     ```json
     {
       "id": 1,
@@ -148,7 +148,7 @@ A API estar· disponÌvel em `http://localhost:5000`, `https://localhost:44324/`, 
 - **Excluir um contato**
 
   - **URL:** `/api/contacts/{id}`
-  - **MÈtodo:** `DELETE`
+  - **M√©todo:** `DELETE`
 
 ## Testando a API
 
